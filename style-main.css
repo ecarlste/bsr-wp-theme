@@ -1,0 +1,21 @@
+/* 
+    Document   : style-main
+    Created on : Dec 2, 2013, 11:24:12 AM
+    Author     : es.carlsten
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.menu {
+    background:#345;
+    color:#FFF;
+    height:2em;
+    padding:.5em;
+    position:absolute;
+    top:50px;
+    width:100%;
+}
+.fixed {
+    position:fixed;
+    top:0;
+}
