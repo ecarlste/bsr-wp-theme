@@ -6,16 +6,87 @@
         Purpose of the stylesheet follows.
 */
 
-.menu {
-    background:#345;
-    color:#FFF;
-    height:2em;
-    padding:.5em;
-    position:absolute;
-    top:50px;
+body, div, li, ul {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+#main-nav-wrapper {
+    -ms-box-shadow: 0 -4px 15px -5px #555;
+    -moz-box-shadow: 0 -4px 15px -5px #555;
+    -o-box-shadow: 0 -4px 15px -5px #555;
+    -webkit-box-shadow: 0 -4px 15px -5px #555;
+    box-shadow: 0 -4px 15px -5px #555;
+    float: left;
+    position: relative;
+    width: 100%;
+    z-index: 2000;
+    background: #555555;
+    border-bottom: 5px solid #1ca933;
+}
+
+#nav {
+    float:left;
+    position:relative;
     width:100%;
 }
-.fixed {
-    position:fixed;
-    top:0;
+
+#main-nav {
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+    height: 38px;
+}
+
+#main-nav ul {
+    display: inline;
+    float: left;
+    padding: 0 20px;
+    position: relative;
+    width: 960px;
+}
+
+#main-nav ul li {
+    display: inline;
+    float: left;
+    position: relative;
+    -ms-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+#main-nav ul li a {
+    color: #fff;
+    float: left;
+    font: 700 20px/20px 'Open Sans Condensed', sans-serif;
+    padding: 9px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#main-nav ul li:hover a,
+#main-nav li.current-menu-item a {
+    color: #fff;
+}
+
+#main-nav ul li:hover, #main-nav .current-menu-item {
+    background: #1ca933;
+}
+
+.menu-main-nav-container {
+}
+
+.fixed-nav {
+    -ms-box-shadow: 0 4px 15px -5px #555;
+    -moz-box-shadow: 0 4px 15px -5px #555;
+    -o-box-shadow: 0 4px 15px -5px #555;
+    -webkit-box-shadow: 0 4px 15px -5px #555;
+    box-shadow: 0 4px 15px -5px #555;
+    position: fixed !important;
+    z-index: 2000;
 }

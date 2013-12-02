@@ -5,78 +5,96 @@
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
-    <div class="menu">Menu</div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />(Bottom!)
+        stuff above
+        <br />
+        <br />
+        <div id="nav" style="top: 0px;">
+            <div id="main-nav-wrapper">
+                <div id="main-nav">
+                    <div class="menu-main-nav-container">
+                        <ul id="menu-main-nav">
+                            <li class="current-menu-item"><a>Menu item 1</a></li>
+                            <li><a>Menu item 2</a></li>
+                            <li><a><span id="number">0</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        stuff in the middle
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />(Bottom!)
     
-    <script>
-    /* Dynamic top menu positioning
-    *
-    */
+        <script>
+        /* Dynamic top menu positioning
+        *
+        */
 
-    var num = 50; //number of pixels before modifying styles
+        var num = 50; //number of pixels before modifying styles
 
-    $(window).bind('scroll', function () {
-        if ($(window).scrollTop() > num) {
-            $('.menu').addClass('fixed');
-        } else {
-            $('.menu').removeClass('fixed');
-        }
-    });
-    </script>
+        $(window).scroll(function () {
+            $('#number').html($(window).scrollTop());
+
+            if ($(window).scrollTop() > num) {
+                $('#nav').addClass('fixed-nav');
+            } else {
+                $('#nav').removeClass('fixed-nav');
+            }
+        });
+        </script>
     </body>
 </html>
