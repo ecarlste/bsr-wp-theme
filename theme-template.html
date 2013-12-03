@@ -5,12 +5,25 @@
         <link rel='stylesheet' id='googlefonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed%3A300%2C700%7COpen+Sans%3A400%2C700&#038;subset=latin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese&#038;ver=3.7.1' type='text/css' media='all' />
         
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $( document ).ready(function() {
+                var navMenuTop;
+                
+                if ($( "#wpadminbar").length == 0 ) {
+                    // check to see if the WordPress Toolbar is missing
+                    navMenuTop = 0;
+                } else {
+                    // otherwise WordPress Toolbar is on
+                    navMenuTop = $( "#wpadminbar" ).height();
+                }
+                
+                $( "#nav" ).css('top', navMenuTop + "px");
+            });
+        </script>
     </head>
     <body>
-        stuff above
-        <br />
-        <br />
-        <div id="nav" style="top: 0px;">
+        <div id="wpadminbar"></div>
+        <div id="nav" class="fixed-nav">
             <div id="main-nav-wrapper">
                 <div id="main-nav">
                     <div class="menu-main-nav-container">
@@ -86,7 +99,8 @@
         /* Dynamic top menu positioning
         *
         */
-
+       
+       /*
         var scrollPositionTop = $('#nav').position().top; //number of pixels before modifying styles
 
         $(window).scroll(function () {
@@ -99,7 +113,7 @@
                 $('#nav').removeClass('fixed-nav');
                 $('#fixed-status').html('relative');
             }
-        });
+        }); */
         </script>
     </body>
 </html>

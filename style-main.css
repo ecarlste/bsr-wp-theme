@@ -14,6 +14,18 @@ a, body, div, li, ul {
     vertical-align: baseline;
 }
 
+#wpadminbar {
+    color: #ccc;
+    height: 28px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 600px;
+    background: #464646;
+    z-index: 99999;
+}
+
 #main-nav-wrapper {
     -ms-box-shadow: 0 -4px 15px -5px #555;
     -moz-box-shadow: 0 -4px 15px -5px #555;
@@ -29,9 +41,8 @@ a, body, div, li, ul {
 }
 
 #nav {
-    float:left;
-    position:relative;
-    width:100%;
+    float: left;
+    width: 100%;
 }
 
 #main-nav {
